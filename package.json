@@ -1,0 +1,32 @@
+{
+    "name": "xtype-html5",
+    "version": "0.0.1",
+    "private": true,
+    "description": "html5 element wrapped with xtype.js.",
+    "dependencies": {
+        "@tengge1/xtype.js": "^2.1.1"
+    },
+    "devDependencies": {
+        "rollup": "^0.59.2",
+        "rollup-plugin-node-resolve": "^3.4.0"
+    },
+    "scripts": {
+        "build": "rollup -c"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/tengge1/xtype-html5.git"
+    },
+    "keywords": [
+        "xtype.js",
+        "html5",
+        "ui",
+        "progressive"
+    ],
+    "author": "tengge",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/tengge1/xtype-html5/issues"
+    },
+    "homepage": "https://github.com/tengge1/xtype-html5"
+}
