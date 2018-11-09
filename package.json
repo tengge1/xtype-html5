@@ -1,7 +1,6 @@
 {
-    "name": "xtype-html5",
-    "version": "0.0.1",
-    "private": true,
+    "name": "@tengge1/xtype-html5",
+    "version": "0.0.2",
     "description": "html5 element wrapped with xtype.js.",
     "dependencies": {
         "@tengge1/xtype.js": "^2.1.1"

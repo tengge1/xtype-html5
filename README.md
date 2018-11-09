@@ -21,6 +21,12 @@ hello.render();
 
 无。
 
+## 安装方法
+
+```
+npm install @tengge1/xtype-html5
+```
+
 ## 核心函数
 
 `Control`: 所有控件基类
