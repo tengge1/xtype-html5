@@ -1,9 +1,9 @@
 {
     "name": "@tengge1/xtype-html5",
-    "version": "0.0.3",
-    "description": "",
+    "version": "0.0.4",
+    "description": "xtype-html5将常用的html5标签封装为类，可以像ExtJs那样通过javascript动态生成页面。这对于功能特别多、逻辑特别复杂的页面特别有用。",
     "dependencies": {
-        "@tengge1/xtype.js": "^3.0.0"
+        "@tengge1/xtype.js": "^3.0.1"
     },
     "devDependencies": {
         "rollup": "^0.59.2",
