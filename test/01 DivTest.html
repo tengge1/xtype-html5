@@ -6,6 +6,12 @@
     <meta charset="utf-8">
     <title>01 DivTest</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <style>
+        .box {
+            background-color: #555;
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
@@ -13,7 +19,23 @@
     <script>
         var hello = XType.UI.create({
             xtype: 'div',
-            html: 'Hello, world!'
+            id: 'hello',
+            cls: 'box',
+            style: {
+                width: '300px',
+                height: '100px'
+            },
+            html: 'Hello, world!',
+            data: {
+                name: 'Kitty',
+                age: 18
+            },
+            listeners: {
+                click: event => {
+                    var control = XType.UI.get('hello');
+                    alert(`${control.data.name} is ${control.data.age} yeas old.`);
+                }
+            }
         });
 
         hello.render();

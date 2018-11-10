@@ -19,12 +19,12 @@
 	    this.children = options.children || [];
 	    this.html = options.html || null;
 
-	    this.attr = options.attr || null; // 控件属性
+	    this.attr = options.attr || null; // 控件属性(setAttribute)
+	    this.prop = options.prop || null; // 控件属性(使用等号赋值)
 	    this.cls = options.cls || null; // class属性
-	    this.data = options.data || null; // 控件数据
 	    this.style = options.style || null; // 控件样式
 	    this.listeners = options.listeners || null; // 监听器
-	    this.userData = options.userData || null; // 自定义数据
+	    this.data = options.data || null; // 自定义数据
 
 	    this.manager = null; // Manager.create时自动赋值
 	}
@@ -120,14 +120,14 @@
 	        });
 	    }
 
+	    // 属性，直接赋值给dom
+	    if (this.prop) {
+	        Object.assign(this.dom, this.prop);
+	    }
+
 	    // class属性
 	    if (this.cls) {
 	        this.dom.className = this.cls;
-	    }
-
-	    // 数据，直接赋值给dom
-	    if (this.data) {
-	        Object.assign(this.dom, this.data);
 	    }
 
 	    // 样式，赋值给dom.style
@@ -142,10 +142,10 @@
 	        });
 	    }
 
-	    // 自定义数据，赋值给dom.userData
-	    if (this.userData) {
-	        this.dom.userData = {};
-	        Object.assign(this.dom.userData, this.userData);
+	    // 自定义数据，赋值给dom.data
+	    if (this.data) {
+	        this.dom.data = {};
+	        Object.assign(this.dom.data, this.data);
 	    }
 
 	    // innerHTML属性
@@ -246,12 +246,12 @@
 	        });
 	    }
 
-	    if (this.cls) {
-	        this.dom.className = this.cls;
+	    if (this.prop) {
+	        Object.assign(this.dom, this.prop);
 	    }
 
-	    if (this.data) {
-	        Object.assign(this.dom, this.data);
+	    if (this.cls) {
+	        this.dom.className = this.cls;
 	    }
 
 	    if (this.style) {
@@ -264,9 +264,9 @@
 	        });
 	    }
 
-	    if (this.userData) {
-	        this.dom.userData = {};
-	        Object.assign(this.dom.userData, this.userData);
+	    if (this.data) {
+	        this.dom.data = {};
+	        Object.assign(this.dom.data, this.data);
 	    }
 
 	    if (this.html) {

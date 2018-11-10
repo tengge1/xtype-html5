@@ -15,11 +15,11 @@ var hello = XType.UI.create({
 hello.render();
 ```
 
-其中，类型`div`是`div`标签的的xtype，属性`html`是`Control`控件的一个属性，它的值会被原生输出到页面上。
+其中，类型`div`是`div`标签的的xtype，属性`html`是`Control`控件的一个属性，它的值会被原生输出到页面上，请参照[xtype.js](https://github.com/tengge1/xtype.js)使用说明。
 
 ## 依赖项
 
-无。
+无。已包含`xtype.js`。
 
 ## 安装方法
 
