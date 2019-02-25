@@ -373,7 +373,7 @@
 	Manager.prototype.create = function (config) {
 	    if (config instanceof Control) { // config是Control实例
 
-	        this.add(config.id, this, config.scope);
+	        this.add(config.id, config, config.scope);
 	        return config;
 	    }
 
